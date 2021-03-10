@@ -10,14 +10,14 @@ function getTrivia() {
 
   if (triviaNumber) {
 
-    fetch(numbersURL).then(function (response) {
+    fetch(numbersURL).then((response) => {
       console.log(numbersURL);
       return response.json();
-    }).then(function (json) {
+    }).then((json) => {
       let trivia = json;
       console.log(trivia);
       triviaText.innerText = trivia.text;
-    }).catch(function (err) {
+    }).catch((err) => {
       console.log('Fetch problem: ' + err.message);
     })
 
